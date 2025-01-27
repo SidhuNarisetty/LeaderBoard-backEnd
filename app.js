@@ -17,10 +17,8 @@ app.use(
 );
 
 app.use('/api/v1/users',userRouter);
-app.use('/api/v1/',(req,res)=>{
-    res.status(200).json({
-        message: 'Hello From Back End'
-    });
+app.get("/", (req, res) => {
+    res.send("Hello, World!");
 });
 
 dbConnections();
