@@ -17,6 +17,11 @@ app.use(
 );
 
 app.use('/api/v1/users',userRouter);
+app.use('/api/v1/',(req,res)=>{
+    res.status(200).json({
+        message: 'Hello From Back End'
+    });
+});
 
 dbConnections();
 
